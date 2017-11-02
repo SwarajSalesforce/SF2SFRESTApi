@@ -18,10 +18,11 @@ You will find it in the  repository.
      
 **********************************************************************************************************************/
 
+
 @RestResource(urlMapping = '/AccountContactDetails/*')
 global class AccountContactService{
 
-    @HttpGet
+ @HttpGet
 / ***************************************************************************************************
 
       @ Method Name: getAccountContactInfo
@@ -93,6 +94,8 @@ Create a lightening component named AccountContactDisplay in the Source Org and 
    @ Created Date     : 02/11/2017
 **************************************************************************************************************************/
 
+
+
 public  class GetAccountContactDetails {
 	
 private static final String CLIENTID     = 'USER_YOURCLIENTID';
@@ -100,6 +103,7 @@ private static final String CLIENTSECRET = 'USER_YOURCLIENTSECRET';
 private static final String USERNAME     = 'YOUR_USERNAME';
 private static final String PASSWORD     = 'YOUR_PASSWORD';
 private static final String URL          = 'YOUR_INSTANCE_URL';
+
 
 /****************************************************************************************************
 
@@ -111,6 +115,7 @@ private static final String URL          = 'YOUR_INSTANCE_URL';
 ****************************************************************************************************/ 
 
 @AuraEnabled
+
 public static list<account> getAccountContactDetails(){
     String accessToken = getAccessToken();
     if(accessToken != null){
@@ -131,7 +136,9 @@ public static list<account> getAccountContactDetails(){
     
 ****************************************************************************************************/ 
 
+
 public static String getAccessToken(){
+
 String reqbody = 'grant_type=password&client_id='+CLIENTID+'&client_secret='+CLIENTSECRET+'&username='+USERNAME+'&password='+PASSWORD;
 
 		Http h = new Http();
@@ -161,7 +168,9 @@ String reqbody = 'grant_type=password&client_id='+CLIENTID+'&client_secret='+CLI
     
 *************************************************************************************************************************/  
 
+
 public static list<Account> getAccountContact(String accessToken){
+	
         
       Http h1 = new Http();
       HttpRequest req1 = new HttpRequest();
