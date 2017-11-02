@@ -27,6 +27,7 @@ global class AccountContactService{
 
       @ Method Name: getAccountContactInfo
       @ Description: This method gets called for REST GET request.
+      @ CreatedBy  : Swaraj behera
       @ Params: 
       @ Return type :Void    
       
@@ -110,10 +111,11 @@ public  class GetAccountContactDetails {
 /***************************************************************************************
 
 
-    @Method Name: getAccountContactDetails
-    @Description: This method gets called from the lightening Component
-    @Params: 
-    @Return type :list<account>    
+    @ Method Nam  : getAccountContactDetails
+    @ Description : This method gets called from the lightening Component
+    @ CreatedBy   : Swaraj behera
+    @ Params      : 
+    @ Return type : list<account>    
     
 ****************************************************************************************
 / 
@@ -137,7 +139,7 @@ public  class GetAccountContactDetails {
     @Method Name : getAccessToken
     @Description : This method gets the access token from another instance
     @Params      : 
-    @Return type :String   
+    @Return type : String   
     
 *******************************************************************************
 / 
@@ -170,6 +172,7 @@ public static String getAccessToken(){
 
     @Method Name : getAccountContact
     @Description : This method calls to the external Salesforce System's REST API and get the result from that.
+    @CreatedBy  : Swaraj behera
     @Params      : 
     @Return type : list<Account>   
     
