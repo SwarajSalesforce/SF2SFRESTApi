@@ -83,7 +83,8 @@ Create a lightening component named AccountContactDisplay in the Source Org and 
 })
 
 
-/*************************************************************************************************************************
+/*******************************************************************************************************
+
    @ Name             : GetAccountContactDetails 
    
    @ Description      : This Class is Used to get AccountDetails from another Salesforce Org. 
@@ -92,7 +93,8 @@ Create a lightening component named AccountContactDisplay in the Source Org and 
    @ Created By       : Swaraj Behera
    
    @ Created Date     : 02/11/2017
-**************************************************************************************************************************/
+   
+**********************************************************************************************************/
 
 
 
@@ -105,14 +107,16 @@ private static final String PASSWORD     = 'YOUR_PASSWORD';
 private static final String URL          = 'YOUR_INSTANCE_URL';
 
 
-/****************************************************************************************************
+/***************************************************************************************
+
 
     @Method Name: getAccountContactDetails
     @Description: This method gets called from the lightening Component
     @Params: 
     @Return type :list<account>    
     
-****************************************************************************************************/ 
+****************************************************************************************
+/ 
 
 @AuraEnabled
 
@@ -127,14 +131,16 @@ public static list<account> getAccountContactDetails(){
     }
     return null;
 }
-/****************************************************************************************************
+/******************************************************************************
+	
 	
     @Method Name : getAccessToken
     @Description : This method gets the access token from another instance
     @Params      : 
     @Return type :String   
     
-****************************************************************************************************/ 
+*******************************************************************************
+/ 
 
 
 public static String getAccessToken(){
@@ -159,14 +165,16 @@ String reqbody = 'grant_type=password&client_id='+CLIENTID+'&client_secret='+CLI
         }
      return null;
 }
-/***********************************************************************************************************************
+/**********************************************************************************
+
 
     @Method Name : getAccountContact
     @Description : This method calls to the external Salesforce System's REST API and get the result from that.
     @Params      : 
     @Return type : list<Account>   
     
-*************************************************************************************************************************/  
+************************************************************************************
+/  
 
 
 public static list<Account> getAccountContact(String accessToken){
