@@ -108,7 +108,8 @@ private static final String URL          = 'YOUR_INSTANCE_URL';
     @Params: 
     @Return type :list<account>    
     
-****************************************************************************************************/   
+****************************************************************************************************/ 
+
 @AuraEnabled
 public static list<account> getAccountContactDetails(){
     String accessToken = getAccessToken();
@@ -159,6 +160,7 @@ String reqbody = 'grant_type=password&client_id='+CLIENTID+'&client_secret='+CLI
     @Return type : list<Account>   
     
 *************************************************************************************************************************/  
+
 public static list<Account> getAccountContact(String accessToken){
         
       Http h1 = new Http();
