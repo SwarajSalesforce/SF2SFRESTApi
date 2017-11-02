@@ -85,14 +85,14 @@ Create a lightening component named AccountContactDisplay in the Source Org and 
 
 /*******************************************************************************************************
 
-   @ Name             : GetAccountContactDetails 
-   
-   @ Description      : This Class is Used to get AccountDetails from another Salesforce Org. 
-   			This class is used in the AccountContactDisplay Lightening Component to show the response
-			
-   @ Created By       : Swaraj Behera
-   
-   @ Created Date     : 02/11/2017
+	   @ Name             : GetAccountContactDetails 
+
+	   @ Description      : This Class is Used to get AccountDetails from another Salesforce Org. 
+				This class is used in the AccountContactDisplay Lightening Component to show the response
+
+	   @ Created By       : Swaraj Behera
+
+	   @ Created Date     : 02/11/2017
    
 **********************************************************************************************************/
 
@@ -100,11 +100,11 @@ Create a lightening component named AccountContactDisplay in the Source Org and 
 
 public  class GetAccountContactDetails {
 	
-private static final String CLIENTID     = 'USER_YOURCLIENTID';
-private static final String CLIENTSECRET = 'USER_YOURCLIENTSECRET';
-private static final String USERNAME     = 'YOUR_USERNAME';
-private static final String PASSWORD     = 'YOUR_PASSWORD';
-private static final String URL          = 'YOUR_INSTANCE_URL';
+	private static final String CLIENTID     = 'USER_YOURCLIENTID';
+	private static final String CLIENTSECRET = 'USER_YOURCLIENTSECRET';
+	private static final String USERNAME     = 'YOUR_USERNAME';
+	private static final String PASSWORD     = 'YOUR_PASSWORD';
+	private static final String URL          = 'YOUR_INSTANCE_URL';
 
 
 /***************************************************************************************
@@ -120,17 +120,17 @@ private static final String URL          = 'YOUR_INSTANCE_URL';
 
 @AuraEnabled
 
-public static list<account> getAccountContactDetails(){
-    String accessToken = getAccessToken();
-    if(accessToken != null){
-        list<account> accountList = new List<account>();
-        accountList = getAccountContact(accessToken);
-        if(accountList != null){
-            return accountList;     
-        }
-    }
-    return null;
-}
+	public static list<account> getAccountContactDetails(){
+		String accessToken = getAccessToken();
+		if(accessToken != null){
+			list<account> accountList = new List<account>();
+			accountList = getAccountContact(accessToken);
+			if(accountList != null){
+				return accountList;     
+			}
+		}
+		return null;
+	}
 /******************************************************************************
 	
 	
@@ -145,7 +145,7 @@ public static list<account> getAccountContactDetails(){
 
 public static String getAccessToken(){
 
-String reqbody = 'grant_type=password&client_id='+CLIENTID+'&client_secret='+CLIENTSECRET+'&username='+USERNAME+'&password='+PASSWORD;
+	String reqbody = 'grant_type=password&client_id='+CLIENTID+'&client_secret='+CLIENTSECRET+'&username='+USERNAME+'&password='+PASSWORD;
 
 		Http h = new Http();
 		HttpRequest req = new HttpRequest();
@@ -177,7 +177,7 @@ String reqbody = 'grant_type=password&client_id='+CLIENTID+'&client_secret='+CLI
 /  
 
 
-public static list<Account> getAccountContact(String accessToken){
+	public static list<Account> getAccountContact(String accessToken){
 	
         
       Http h1 = new Http();
@@ -208,9 +208,9 @@ public static list<Account> getAccountContact(String accessToken){
 
 Create and App call the component to see it.
 
-<aura:application extends="force:slds">
-    <c:AccountContactDisplay />
-</aura:application>
+	<aura:application extends="force:slds">
+		<c:AccountContactDisplay />
+	</aura:application>
 
 Below are screenshot of it.
 
