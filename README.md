@@ -11,9 +11,11 @@ Create Class named AccountContactService in your destination org.
 You will find it in the  repository.
 
 /*********************************************************************************************************************
+
      @Name             : AccountContactService
      @Description      : This class will send list of Account with Contacts as response to the calling System
      @CreatedBy        : Swaraj Behera
+     
 **********************************************************************************************************************/
 
 @RestResource(urlMapping = '/AccountContactDetails/*')
@@ -21,10 +23,12 @@ global class AccountContactService{
 
     @HttpGet
 / ***************************************************************************************************
+
       @ Method Name: getAccountContactInfo
       @ Description: This method gets called for REST GET request.
       @ Params: 
       @ Return type :Void    
+      
 ****************************************************************************************************/
 
     global static void getAccountContactInfo() {
@@ -57,9 +61,11 @@ global class AccountContactService{
 Create a lightening component named AccountContactDisplay in the Source Org and Use the javascript controller and Apex controller mentioned in the repository. Change the client id,client secret,Username,password and Instance URL in the GetAccountContactDetails.
 
 /*
+
 @Function Name : myAction
 @Param         : component, event, helper
 @CreatedBy     : Swaraj Behera
+
 */
 ({
 
@@ -77,8 +83,10 @@ Create a lightening component named AccountContactDisplay in the Source Org and 
 
 
 /*********************************************************************************************************************
+
 * Name             : AccountContactService
 * Description      : This class will send list of Account with Contacts as response to the calling System
+
 **********************************************************************************************************************/
 
 @RestResource(urlMapping = '/AccountContactDetails/*')
