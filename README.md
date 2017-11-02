@@ -1,4 +1,4 @@
-# SalesforceToSalesforce Integation with Lightening Component
+# Invoke REST call from Lightening Component and show it the response
 
 ### Step 1--
 
