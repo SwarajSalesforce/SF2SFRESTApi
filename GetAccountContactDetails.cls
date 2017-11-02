@@ -8,11 +8,11 @@
 
 public  class GetAccountContactDetails {
 	
-private static final String CLIENTID     = '3MVG9ZL0ppGP5UrACnoIGIA9ErWLEWNjpJ4do7KxYllu_eVX4G8CUebI8NkHmGX0EDqaU19zAwlaN4zTnH6mR';
-private static final String CLIENTSECRET = '1872222491789468577';
-private static final String USERNAME     = 'swaraj.salesforce@outlook.com';
-private static final String PASSWORD     = 'health@123';
-private static final String URL          = 'https://swaraj1933-dev-ed.my.salesforce.com';
+private static final String CLIENTID     = 'USER_YOURCLIENTID';
+private static final String CLIENTSECRET = 'USER_YOURCLIENTSECRET';
+private static final String USERNAME     = 'YOUR_USERNAME';
+private static final String PASSWORD     = 'YOUR_PASSWORD';
+private static final String URL          = 'YOUR_INSTANCE_URL';
 
 /****************************************************************************************************
     @Method Name: getAccountContactDetails
