@@ -1,4 +1,4 @@
-# Invoke REST call from Lightening Component and show it the response
+# Invoke REST call from Lightening Component and show the response in the component Markup
 
 ### Step 1--
 
